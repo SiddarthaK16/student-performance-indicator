@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top left, #243b55, transparent 40%),
+                radial-gradient(circle at bottom right, #141e30, transparent 45%),
+                #0f172a;
+            color: #f8fafc;
+        }
+
+        .home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .home-content {
+            max-width: 750px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            color: #93c5fd;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #94a3b8;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .home-btn {
+            display: inline-block;
+            padding: 15px 28px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s ease;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+        }
+
+        .home-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.35);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="home">
+
+    <div class="home-content">
+
+        <div class="badge">
+            STUDENT PERFORMANCE ANALYTICS
+        </div>
+
+        <h1>
+            Predict. Analyze. Improve.
+        </h1>
+
+        <p class="description">
+            Welcome to the Student Performance Predictor.
+            Use academic and demographic information to estimate
+            a student's mathematics score using machine learning.
+        </p>
+
+        <a href="{{ url_for('predict_datapoint') }}" class="home-btn">
+            Predict Mathematics Score →
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
